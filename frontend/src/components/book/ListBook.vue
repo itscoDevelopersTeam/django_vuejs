@@ -42,7 +42,7 @@ export default {
 
     methods: {
         getBooks() {
-            const path = 'http://localhost:8000/api/v1.0/books/'
+            const path = 'http://localhost:80/api/v1.0/books/'
             axios.get(path).then((response) => {
                 this.books = response.data
             })

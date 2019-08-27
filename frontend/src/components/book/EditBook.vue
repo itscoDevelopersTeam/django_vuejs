@@ -59,7 +59,7 @@ export default {
         onSubmit(evt) {
             evt.preventDefault()
 
-            const path = `http://localhost:8000/api/v1.0/books/${this.bookId}/`
+            const path = `http://localhost:80/api/v1.0/books/${this.bookId}/`
             axios.put(path, this.form).then((response) => {
                 this.form.title = response.data.title
                 this.form.description = response.data.description
@@ -72,7 +72,7 @@ export default {
         },
 
         getBook() {
-            const path = `http://localhost:8000/api/v1.0/books/${this.bookId}/`
+            const path = `http://localhost:80/api/v1.0/books/${this.bookId}/`
             axios.get(path).then((response) => {
                 this.form.title = response.data.title
                 this.form.description = response.data.description
